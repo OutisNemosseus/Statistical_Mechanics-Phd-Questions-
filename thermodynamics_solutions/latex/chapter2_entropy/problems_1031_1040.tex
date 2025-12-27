@@ -1,0 +1,315 @@
+% Problems 1031-1040: The Second Law and Entropy
+
+%% PROBLEM 1031 %%
+\section{Problem 1031}
+\textbf{(Wisconsin)}
+
+A steam turbine is operated with an intake temperature of $400^\circ$C, and an exhaust temperature of $150^\circ$C. What is the maximum amount of work the turbine can do for a given heat input $Q$? Under what conditions is the maximum achieved?
+
+\subsection*{Solution}
+
+From the Clausius formula:
+\begin{equation}
+\frac{Q_1}{T_1} \geq \frac{Q_2}{T_2}
+\end{equation}
+
+we find the external work to be:
+\begin{equation}
+W = Q_1 - Q_2 \leq Q_1\left(1 - \frac{T_2}{T_1}\right)
+\end{equation}
+
+Substituting $Q_1 = Q$, $T_1 = 673$ K and $T_2 = 423$ K in the above we have:
+\begin{equation}
+\boxed{W_{\max} = \left(1 - \frac{423}{673}\right)Q = 0.37Q}
+\end{equation}
+
+As the equal sign in the Clausius formula is valid if and only if the cycle is reversible, when and only when the steam turbine is a reversible engine can it achieve maximum work.
+
+%% PROBLEM 1032 %%
+\section{Problem 1032}
+\textbf{(Wisconsin)}
+
+What is a Carnot cycle? Illustrate on a pV diagram and an ST diagram. Derive the efficiency of an engine using the Carnot cycle.
+
+\subsection*{Solution}
+
+A Carnot cycle is a cycle composed of two isothermal lines and two adiabatic lines.
+
+Now we calculate the efficiency of the Carnot engine. First, we assume the cycle is reversible and the gas is 1 mole of an ideal gas. As $A \to B$ is a process of isothermal expansion, the heat absorbed by the gas from the heat source is:
+\begin{equation}
+Q_1 = RT_1 \ln(V_B/V_A)
+\end{equation}
+
+As $C \to D$ is a process of isothermal compression, the heat released by the gas is:
+\begin{equation}
+Q_2 = RT_2 \ln(V_C/V_D)
+\end{equation}
+
+Using the adiabatic relations $T_1 V_B^{\gamma-1} = T_2 V_C^{\gamma-1}$ and $T_1 V_A^{\gamma-1} = T_2 V_D^{\gamma-1}$, we find:
+\begin{equation}
+\frac{V_B}{V_A} = \frac{V_C}{V_D}
+\end{equation}
+
+Therefore the efficiency of the engine is:
+\begin{equation}
+\boxed{\eta = \frac{W}{Q_1} = \frac{Q_1 - Q_2}{Q_1} = 1 - \frac{T_2}{T_1}}
+\end{equation}
+
+%% PROBLEM 1033 %%
+\section{Problem 1033}
+\textbf{(Wisconsin)}
+
+A Carnot engine has a cycle pictured below.
+(a) What thermodynamic processes are involved at boundaries $AD$ and $BC$; $AB$ and $CD$?
+(b) Where is work put in and where is it extracted?
+(c) If the above is a steam engine with $T_{\text{high}} = 450$ K, operating at room temperature, calculate the efficiency.
+
+\subsection*{Solution}
+
+\textbf{(a)} $DA$ and $BC$ are adiabatic processes, $AB$ and $CD$ are isothermal processes.
+
+\textbf{(b)} Work is put in during the processes $CD$ and $DA$; it is extracted in the processes $AB$ and $BC$.
+
+\textbf{(c)} The efficiency is:
+\begin{equation}
+\boxed{\eta = 1 - \frac{T_{\text{low}}}{T_{\text{high}}} = 1 - \frac{300}{450} = 0.33 = 33\%}
+\end{equation}
+
+%% PROBLEM 1034 %%
+\section{Problem 1034}
+\textbf{(Columbia)}
+
+A Carnot engine has a cycle as shown. If $W$ and $W'$ represent work done by 1 mole of monatomic and diatomic gas, respectively, calculate $W'/W$.
+
+\subsection*{Solution}
+
+For the Carnot engine using monatomic gas, we have:
+\begin{equation}
+W = R(T_1 - T_2) \ln(V_2/V_1)
+\end{equation}
+
+where $T_1 = 4T_0$ and $T_2 = T_0$ are the temperatures of the respective heat sources.
+
+Using the adiabatic equations for both gases:
+\begin{equation}
+\frac{W'}{W} = \frac{3 + (1-\gamma')^{-1}}{3 + (1-\gamma)^{-1}}
+\end{equation}
+
+For a monatomic gas $\gamma = 5/3$; for a diatomic gas, $\gamma' = 7/5$. Thus:
+\begin{equation}
+\boxed{\frac{W'}{W} = \frac{1}{3}}
+\end{equation}
+
+%% PROBLEM 1035 %%
+\section{Problem 1035}
+\textbf{(CUSPEA)}
+
+Two identical bodies have internal energy $U = NCT$, with a constant $C$. The values of $N$ and $C$ are the same for each body. The initial temperatures of the bodies are $T_1$ and $T_2$, and they are used as a source of work by connecting them to a Carnot heat engine and bringing them to a common final temperature $T_f$.
+
+(a) What is the final temperature $T_f$?
+(b) What is the work delivered?
+
+\subsection*{Solution}
+
+\textbf{(a)} The internal energy is $U = NCT$. Thus $dQ_1 = NC\,dT_1$ and $dQ_2 = NC\,dT_2$. For a Carnot engine, we have:
+\begin{equation}
+\frac{dQ_1}{T_1} = -\frac{dQ_2}{T_2}
+\end{equation}
+
+Thus:
+\begin{equation}
+\int_{T_1}^{T_f} \frac{dT_1}{T_1} = -\int_{T_2}^{T_f} \frac{dT_2}{T_2}
+\end{equation}
+
+This gives $\ln(T_f/T_1) = -\ln(T_f/T_2)$, therefore:
+\begin{equation}
+\boxed{T_f = \sqrt{T_1 T_2}}
+\end{equation}
+
+\textbf{(b)} Conservation of energy gives:
+\begin{equation}
+W = (U_1 - U) - (U - U_2) = U_1 + U_2 - 2U
+\end{equation}
+\begin{equation}
+\boxed{W = NC(T_1 + T_2 - 2T_f) = NC(T_1 + T_2 - 2\sqrt{T_1 T_2})}
+\end{equation}
+
+%% PROBLEM 1036 %%
+\section{Problem 1036}
+\textbf{(Unknown)}
+
+A self-contained machine only inputs two equal steady streams of hot and cold water at temperatures $T_1$ and $T_2$. Its only output is a single high-speed jet of water. The heat capacity per unit mass of water, $C$, may be assumed to be independent of temperature. The machine is in a steady state and the kinetic energy in the incoming streams is negligible.
+
+(a) What is the speed of the jet in terms of $T_1$, $T_2$ and $T$, where $T$ is the temperature of water in the jet?
+
+(b) What is the maximum possible speed of the jet?
+
+\subsection*{Solution}
+
+\textbf{(a)} The heat intake per unit mass of water is:
+\begin{equation}
+\Delta Q = \frac{1}{2}[C(T_1 - T) - C(T - T_2)]
+\end{equation}
+
+As the machine is in a steady state, $v^2/2 = \Delta Q$, giving:
+\begin{equation}
+\boxed{v = \sqrt{C(T_1 + T_2 - 2T)}}
+\end{equation}
+
+\textbf{(b)} Since the entropy increase is always positive:
+\begin{equation}
+\Delta S = C\ln\frac{T^2}{T_1 T_2} \geq 0
+\end{equation}
+
+This means $T \geq \sqrt{T_1 T_2}$. The maximum speed occurs when $T = \sqrt{T_1 T_2}$:
+\begin{equation}
+\boxed{v_{\max} = \sqrt{C(T_1 + T_2 - 2\sqrt{T_1 T_2})} = \sqrt{C}(\sqrt{T_1} - \sqrt{T_2})}
+\end{equation}
+
+%% PROBLEM 1037 %%
+\section{Problem 1037}
+\textbf{(Columbia)}
+
+In the water behind a high power dam (110 m high) the temperature difference between surface and bottom may be $10^\circ$C. Compare the possible energy extraction from the thermal energy of a gram of water with that generated by allowing the water to flow over the dam through turbines in the conventional way.
+
+\subsection*{Solution}
+
+The efficiency of a perfect engine is:
+\begin{equation}
+\eta = \frac{\Delta T}{T_{\text{high}}}
+\end{equation}
+
+The energy extracted from one gram of water is then:
+\begin{equation}
+W = \eta Q = \frac{\Delta T}{T_{\text{high}}} C_v \Delta T
+\end{equation}
+
+where $Q$ is the heat extracted from one gram of water, $C_v$ is the specific heat. Thus:
+\begin{equation}
+W = 1 \times 10^2/300 = 0.3 \text{ cal}
+\end{equation}
+
+The energy generated by allowing the water to flow over the dam is:
+\begin{equation}
+W' = mgh = 1 \times 980 \times 100 \times 10^2 = 10^7 \text{ erg} = 0.24 \text{ cal}
+\end{equation}
+
+We can see that under ideal conditions $W' < W$. However, the efficiency of an actual engine is much less than that of a perfect engine. Therefore, the method by which we generate energy from the water height difference is still more efficient.
+
+%% PROBLEM 1038 %%
+\section{Problem 1038}
+\textbf{(Columbia)}
+
+Consider an engine working in a reversible cycle and using an ideal gas with constant heat capacity $c_p$ as the working substance. The cycle consists of two processes at constant pressure, joined by two adiabatics.
+
+(a) Find the efficiency of this engine in terms of $p_1$, $p_2$.
+
+(b) Which temperature of $T_a$, $T_b$, $T_c$, $T_d$ is highest, and which is lowest?
+
+(c) Show that a Carnot engine with the same gas working between the highest and lowest temperatures has greater efficiency than this engine.
+
+\subsection*{Solution}
+
+\textbf{(a)} In the cycle, the energy the working substance absorbs from the source of higher temperature is:
+\begin{equation}
+Q_{\text{in}} = c_p(T_b - T_a)
+\end{equation}
+
+The energy it gives to the source of lower temperature is:
+\begin{equation}
+Q_{\text{out}} = c_p(T_c - T_d)
+\end{equation}
+
+From the equation of state $pV = nRT$ and the adiabatic equations, we have:
+\begin{equation}
+\frac{T_b}{T_a} = \frac{T_c}{T_d}
+\end{equation}
+
+Thus the efficiency is:
+\begin{equation}
+\boxed{\eta = 1 - \frac{T_c - T_d}{T_b - T_a} = 1 - \left(\frac{p_1}{p_2}\right)^{(\gamma-1)/\gamma}}
+\end{equation}
+
+\textbf{(b)} From the state equation, we know $T_b > T_a$, $T_c > T_d$; from the adiabatic equation, we know $T_b > T_c$, $T_a > T_d$; thus:
+\begin{equation}
+\boxed{T_b > T_c > T_a > T_d}
+\end{equation}
+
+\textbf{(c)} The Carnot efficiency between $T_b$ and $T_d$ is:
+\begin{equation}
+\eta_C = 1 - \frac{T_d}{T_b} > 1 - \frac{T_c - T_d}{T_b - T_a} = \eta
+\end{equation}
+
+%% PROBLEM 1039 %%
+\section{Problem 1039}
+\textbf{(Columbia)}
+
+A building at absolute temperature $T$ is heated by means of a heat pump which uses a river at absolute temperature $T_0$ as a source of heat. The heat pump has an ideal performance and consumes power $W$. The building loses heat at a rate $\alpha(T - T_0)$, where $\alpha$ is a constant.
+
+(a) Show that the equilibrium temperature $T_e$ of the building is given by:
+\begin{equation}
+T_e = T_0 + \frac{W}{2\alpha}\left[1 + \sqrt{1 + \frac{4\alpha T_0}{W}}\right]
+\end{equation}
+
+(b) Suppose that the heat pump is replaced by a simple heater which also consumes a constant power $W$ and which converts this into heat with 100\% efficiency. Show explicitly why this is less desirable than a heat pump.
+
+\subsection*{Solution}
+
+\textbf{(a)} The rate of heat from the pump is:
+\begin{equation}
+Q = \frac{W}{\eta} = \frac{WT}{T - T_0}
+\end{equation}
+
+At equilibrium, $T = T_e$ and $Q = Q_e = \alpha(T_e - T_0)$. Thus:
+\begin{equation}
+\frac{WT_e}{T_e - T_0} = \alpha(T_e - T_0)
+\end{equation}
+
+Solving this quadratic equation:
+\begin{equation}
+\boxed{T_e = T_0 + \frac{W}{2\alpha}\left[1 + \sqrt{1 + \frac{4\alpha T_0}{W}}\right]}
+\end{equation}
+
+\textbf{(b)} In this case, the equilibrium condition is:
+\begin{equation}
+W = \alpha(T_e' - T_0)
+\end{equation}
+
+Thus:
+\begin{equation}
+T_e' = T_0 + \frac{W}{\alpha} < T_e
+\end{equation}
+
+Therefore it is less desirable than a heat pump.
+
+%% PROBLEM 1040 %%
+\section{Problem 1040}
+\textbf{(UC Berkeley)}
+
+A room at temperature $T_2$ loses heat to the outside at temperature $T_1$ at a rate $A(T_2 - T_1)$. It is warmed by a heat pump operated as a Carnot cycle between $T_1$ and $T_2$. The power supplied by the heat pump is $dW/dt$.
+
+(a) What is the maximum rate $dQ_m/dt$ at which the heat pump can deliver heat to the room? What is the gain $dQ_m/dW$? Evaluate the gain for $t_1 = 2^\circ$C, $t_2 = 27^\circ$C.
+
+(b) Derive an expression for the equilibrium temperature of the room, $T_2$, in terms of $T_1$, $A$ and $dW/dt$.
+
+\subsection*{Solution}
+
+\textbf{(a)} From $dQ_m \cdot (T_2 - T_1)/T_2 = dW$, we get:
+\begin{equation}
+\frac{dQ_m}{dW} = \frac{T_2}{T_2 - T_1}
+\end{equation}
+
+With $T_1 = 275$ K, $T_2 = 300$ K, we have:
+\begin{equation}
+\boxed{\frac{dQ_m}{dW} = \frac{300}{25} = 12}
+\end{equation}
+
+\textbf{(b)} When equilibrium is reached, one has:
+\begin{equation}
+A(T_2 - T_1) = \frac{T_2}{T_2 - T_1}\frac{dW}{dt}
+\end{equation}
+
+Solving for $T_2$:
+\begin{equation}
+\boxed{T_2 = T_1 + \frac{1}{2A}\frac{dW}{dt}\left[1 + \sqrt{1 + \frac{4AT_1}{dW/dt}}\right]}
+\end{equation}

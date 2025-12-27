@@ -1,0 +1,299 @@
+% Problems 1011-1020: Thermodynamic States and the First Law
+
+%% PROBLEM 1011 %%
+\section{Problem 1011}
+\textbf{(Wisconsin)}
+
+A solid object has a density $\rho$, mass $M$, and coefficient of linear expansion $\alpha$. Show that at pressure $p$ the heat capacities $C_p$ and $C_v$ are related by:
+\begin{equation}
+C_p - C_v = \frac{3\alpha Mp}{\rho}
+\end{equation}
+
+\subsection*{Solution}
+
+From the first law of thermodynamics $dQ = dU + pdV$ and:
+\begin{equation}
+\left(\frac{\partial U}{\partial T}\right)_p = \left(\frac{\partial U}{\partial T}\right)_V \quad \text{(for solid)}
+\end{equation}
+we obtain:
+\begin{equation}
+C_p - C_v = \left(\frac{\partial Q}{\partial T}\right)_p - \left(\frac{\partial Q}{\partial T}\right)_V = p\frac{dV}{dT}
+\end{equation}
+
+From the definition of coefficient of linear expansion:
+\begin{equation}
+\alpha = \frac{\alpha_{\text{solid}}}{3} = \frac{1}{3V}\frac{dV}{dT}
+\end{equation}
+we obtain:
+\begin{equation}
+\frac{dV}{dT} = 3\alpha V = 3\alpha \cdot \frac{M}{\rho}
+\end{equation}
+
+Substituting this, we find:
+\begin{equation}
+\boxed{C_p - C_v = 3\alpha \cdot \frac{M}{\rho} \cdot p}
+\end{equation}
+
+%% PROBLEM 1012 %%
+\section{Problem 1012}
+\textbf{(Wisconsin)}
+
+One mole of a monatomic perfect gas initially at temperature $T_0$ expands from volume $V_0$ to $2V_0$: (a) at constant temperature, (b) at constant pressure.
+
+Calculate the work of expansion and the heat absorbed by the gas in each case.
+
+\subsection*{Solution}
+
+\textbf{(a) At constant temperature $T_0$:}
+
+The work is:
+\begin{equation}
+W = \int_{V_0}^{2V_0} p\,dV = RT_0 \int_{V_0}^{2V_0} \frac{dV}{V} = RT_0 \ln 2
+\end{equation}
+
+As the change of the internal energy is zero, the heat absorbed by the gas is:
+\begin{equation}
+\boxed{Q = W = RT_0 \ln 2}
+\end{equation}
+
+\textbf{(b) At constant pressure $p$:}
+
+The work is:
+\begin{equation}
+W = p\Delta V = pV_0 = RT_0
+\end{equation}
+
+The increase of the internal energy is:
+\begin{equation}
+\Delta U = C_v \Delta T = \frac{3}{2}R\Delta T = \frac{3}{2}p\Delta V = \frac{3}{2}pV_0 = \frac{3}{2}RT_0
+\end{equation}
+
+Thus the heat absorbed by the gas is:
+\begin{equation}
+\boxed{Q = \Delta U + W = \frac{5}{2}RT_0}
+\end{equation}
+
+%% PROBLEM 1013 %%
+\section{Problem 1013}
+\textbf{(Wisconsin)}
+
+For a diatomic ideal gas near room temperature, what fraction of the heat supplied is available for external work if the gas is expanded at constant pressure? At constant temperature?
+
+\subsection*{Solution}
+
+In the process of expansion at constant pressure $p$, assuming that the volume increases from $V_1$ to $V_2$ and the temperature changes from $T_1$ to $T_2$, we have:
+\begin{align}
+pV_1 &= nRT_1 \\
+pV_2 &= nRT_2
+\end{align}
+
+In this process, the work done by the system on the outside world is $W = p(V_2 - V_1) = nR\Delta T$ and the increase of the internal energy of the system is:
+\begin{equation}
+\Delta U = C_v \Delta T
+\end{equation}
+
+Therefore:
+\begin{equation}
+\frac{W}{Q} = \frac{W}{\Delta U + W} = \frac{nR}{C_v + nR} = \boxed{\frac{2}{7}}
+\end{equation}
+
+In the process of expansion at constant temperature, the internal energy does not change. Hence:
+\begin{equation}
+\boxed{W/Q = 1}
+\end{equation}
+
+%% PROBLEM 1014 %%
+\section{Problem 1014}
+\textbf{(Wisconsin)}
+
+A compressor designed to compress air is used instead to compress helium. It is found that the compressor overheats. Explain this effect, assuming the compression is approximately adiabatic and the starting pressure is the same for both gases.
+
+\subsection*{Solution}
+
+The state equation of ideal gas is:
+\begin{equation}
+pV = nRT
+\end{equation}
+
+The equation of adiabatic process is:
+\begin{equation}
+p\left(\frac{V}{V_0}\right)^\gamma = p_0
+\end{equation}
+
+where $\gamma = C_p/C_v$, $p_0$ and $p$ are starting and final pressures, respectively, and $V_0$ and $V$ are volumes. Because $V_0 > V$ and $\gamma_{\text{He}} > \gamma_{\text{Air}}$ ($\gamma_{\text{He}} = 5/3$; $\gamma_{\text{Air}} = 7/5$), we get:
+\begin{equation}
+\boxed{p_{\text{He}} > p_{\text{Air}} \quad \text{and} \quad T_{\text{He}} > T_{\text{Air}}}
+\end{equation}
+
+%% PROBLEM 1015 %%
+\section{Problem 1015}
+\textbf{(Wisconsin)}
+
+Calculate the temperature after adiabatic compression of a gas to 10.0 atmospheres pressure from initial conditions of 1 atmosphere and 300K: (a) for air, (b) for helium (assume the gases are ideal).
+
+\subsection*{Solution}
+
+The adiabatic process of an ideal gas follows the law:
+\begin{equation}
+T_B = \left(\frac{p_B}{p_A}\right)^{(\gamma-1)/\gamma} T_A = 10^{(\gamma-1)/\gamma} \times 300\text{ K}
+\end{equation}
+
+\textbf{(a) For air:} $\gamma = C_p/C_v = 1.4$, thus $\boxed{T_B = 5.8 \times 10^2 \text{ K}}$.
+
+\textbf{(b) For helium:} $\gamma = C_p/C_v = 5/3$, thus $\boxed{T_B = 7.5 \times 10^2 \text{ K}}$.
+
+%% PROBLEM 1016 %%
+\section{Problem 1016}
+\textbf{(UC Berkeley)}
+
+(a) For a mole of ideal gas at $t = 0^\circ$C, calculate the work $W$ done (in Joules) in an isothermal expansion from $V_0$ to $10V_0$ in volume.
+
+(b) For an ideal gas initially at $t_i = 0^\circ$C, find the final temperature $t_f$ (in $^\circ$C) when the volume is expanded to $10V_0$ reversibly and adiabatically.
+
+\subsection*{Solution}
+
+\textbf{(a)}
+\begin{equation}
+W = \int p\,dV = \int_{V_0}^{10V_0} \frac{RT}{V}\,dV = RT\ln 10 = \boxed{5.2 \times 10^3 \text{ J}}
+\end{equation}
+
+\textbf{(b)} Combining the equation of adiabatic process $pV^\gamma = \text{const}$ and the equation of state $pV = RT$, we get $TV^{\gamma-1} = \text{const}$. Thus:
+\begin{equation}
+T_f = T_i \cdot 10^{1-\gamma}
+\end{equation}
+
+If the ideal gas molecule is monatomic, $\gamma = 5/3$, we get:
+\begin{equation}
+\boxed{t_f = 59\text{ K} \text{ or } -214^\circ\text{C}}
+\end{equation}
+
+%% PROBLEM 1017 %%
+\section{Problem 1017}
+\textbf{(Wisconsin)}
+
+(a) How much heat is required to raise the temperature of 1000 grams of nitrogen from $-20^\circ$C to $100^\circ$C at constant pressure?
+
+(b) How much has the internal energy of the nitrogen increased?
+
+(c) How much external work was done?
+
+(d) How much heat is required if the volume is kept constant?
+
+Take the specific heat at constant volume $c_v = 5$ cal/mole$\cdot^\circ$C and $R = 2$ cal/mole$\cdot^\circ$C.
+
+\subsection*{Solution}
+
+\textbf{(a)} We consider nitrogen to be an ideal gas. The heat required is:
+\begin{equation}
+Q = n(c_v + R)\Delta T = \frac{1000}{28}(5 + 2) \times 120 = \boxed{30 \times 10^3 \text{ cal}}
+\end{equation}
+
+\textbf{(b)} The increase of the internal energy is:
+\begin{equation}
+\Delta U = nc_v\Delta T = \frac{1000}{28} \times 5 \times 120 = \boxed{21 \times 10^3 \text{ cal}}
+\end{equation}
+
+\textbf{(c)} The external work done is:
+\begin{equation}
+W = Q - \Delta U = \boxed{8.6 \times 10^3 \text{ cal}}
+\end{equation}
+
+\textbf{(d)} If it is a process of constant volume, the required heat is:
+\begin{equation}
+Q = nc_v\Delta T = \boxed{21 \times 10^3 \text{ cal}}
+\end{equation}
+
+%% PROBLEM 1018 %%
+\section{Problem 1018}
+\textbf{(Wisconsin)}
+
+10 litres of gas at atmospheric pressure is compressed isothermally to a volume of 1 litre and then allowed to expand adiabatically to 10 litres.
+
+(a) Sketch the processes on a pV diagram for a monatomic gas.
+
+(b) Make a similar sketch for a diatomic gas.
+
+(c) Is a net work done on or by the system?
+
+(d) Is it greater or less for the diatomic gas?
+
+\subsection*{Solution}
+
+We are given that $V_A = 10$ L, $V_B = 1$ L, $V_C = 10$ L and $p_A = 1$ atm.
+
+$A \to B$ is an isothermal process, thus $pV = \text{const}$, or $p_A V_A = p_B V_B$, hence:
+\begin{equation}
+p_B = \frac{V_A}{V_B}p_A = 10 \text{ atm}
+\end{equation}
+
+$B \to C$ is an adiabatic process, thus $pV^\gamma = \text{const}$, or $p_B V_B^\gamma = p_C V_C^\gamma$, hence:
+\begin{equation}
+p_C = \left(\frac{V_B}{V_C}\right)^\gamma p_B = 10^{1-\gamma} \times 10 \text{ atm}
+\end{equation}
+
+\textbf{(a) For the monatomic gas:} $\gamma = 5/3$, $p_C = 10^{-2/3} = 0.215$ atm.
+
+\textbf{(b) For the diatomic gas:} $\gamma = 7/5$, $p_C = 10^{-2/5} = 0.398$ atm.
+
+\textbf{(c)} In each case, as the curve $AB$ for compression is higher than the curve $BC$ for expansion, net work is done on the system.
+
+\textbf{(d)} As $p_C$(monatomic gas) $< p_C$(diatomic gas), the work on the monatomic gas is greater than that on the diatomic gas.
+
+%% PROBLEM 1019 %%
+\section{Problem 1019}
+\textbf{(UC Berkeley)}
+
+An ideal gas is contained in a large jar of volume $V_0$. Fitted to the jar is a glass tube of cross-sectional area $A$ in which a metal ball of mass $M$ fits snugly. The equilibrium pressure in the jar is slightly higher than atmospheric pressure $p_0$ because of the weight of the ball. If the ball is displaced slightly from equilibrium it will execute simple harmonic motion (neglecting friction). If the states of the gas represent a quasistatic adiabatic process and $\gamma$ is the ratio of specific heats, find a relation between the oscillation frequency $f$ and the variables of the problem.
+
+\subsection*{Solution}
+
+Assume the pressure in the jar is $p$. As the process is adiabatic, we have:
+\begin{equation}
+pV^\gamma = \text{const}
+\end{equation}
+giving:
+\begin{equation}
+dp + \gamma \frac{p}{V}dV = 0
+\end{equation}
+
+This can be written as $F = A\,dp = -kx$, where $F$ is the force on the ball, $x = dV/A$ and $k = \gamma A^2 p/V$. Noting that $p = p_0 + Mg/A$, we obtain:
+\begin{equation}
+\boxed{f = \frac{1}{2\pi}\sqrt{\frac{\gamma A^2(p_0 + Mg/A)}{MV_0}}}
+\end{equation}
+
+%% PROBLEM 1020 %%
+\section{Problem 1020}
+\textbf{(Wisconsin)}
+
+The speed of longitudinal waves of small amplitude in an ideal gas is:
+\begin{equation}
+c = \sqrt{\frac{1}{\rho}\left(\frac{\partial p}{\partial \rho}\right)}
+\end{equation}
+where $p$ is the ambient gas pressure and $\rho$ is the corresponding gas density.
+
+Obtain expressions for:
+(a) The speed of sound in a gas for which the compressions and rarefactions are isothermal.
+(b) The speed of sound in a gas for which the compressions and rarefactions are adiabatic.
+
+\subsection*{Solution}
+
+The isothermal process of an ideal gas follows $pV = \text{const}$; the adiabatic process of an ideal gas follows $pV^\gamma = \text{const}$. We shall use $pV^t = \text{const}$ for a general process, its differential equation being:
+\begin{equation}
+\frac{dp}{p} + t\frac{dV}{V} = 0
+\end{equation}
+
+Thus:
+\begin{equation}
+\left(\frac{\partial p}{\partial V}\right) = -t\frac{p}{V}
+\end{equation}
+
+With $\rho = M/V$, we have:
+\begin{equation}
+\left(\frac{\partial p}{\partial \rho}\right) = t\frac{p}{\rho} = t\frac{RT}{M}
+\end{equation}
+
+Therefore:
+
+\textbf{(a) The isothermal process:} $t = 1$, thus $\boxed{c = \sqrt{RT/M}}$.
+
+\textbf{(b) The adiabatic process:} $t = \gamma$, thus $\boxed{c = \sqrt{\gamma RT/M}}$.

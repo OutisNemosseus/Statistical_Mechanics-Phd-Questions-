@@ -1,0 +1,304 @@
+% Problems 1051-1060: The Second Law and Entropy
+
+%% PROBLEM 1051 %%
+\section{Problem 1051}
+\textbf{(MIT)}
+
+$N$ atoms of a perfect gas are contained in a cylinder with insulating walls, closed at one end by a piston. The initial volume is $V_1$ and the initial temperature $T_1$.
+
+(a) Find the change in temperature, pressure and entropy that would occur if the volume were suddenly increased to $V_2$ by withdrawing the piston.
+
+(b) How rapidly must the piston be withdrawn for the above expressions to be valid?
+
+\subsection*{Solution}
+
+\textbf{(a)} The gas does no work when the piston is withdrawn rapidly. Also, the walls are thermally insulating, so that the internal energy of the gas does not change, i.e., $dU = 0$. Since the internal energy of an ideal gas is only dependent upon temperature $T$, the change in temperature is 0, i.e., $T_2 = T_1$.
+
+As for the pressure: $p_2/p_1 = V_1/V_2$.
+
+The increase in entropy is:
+\begin{equation}
+\boxed{\Delta S = Nk\ln\frac{V_2}{V_1}}
+\end{equation}
+
+\textbf{(b)} The speed at which the piston is withdrawn must be far greater than the mean speed of the gas molecules:
+\begin{equation}
+\boxed{u \gg \bar{v} = \sqrt{\frac{8kT_1}{\pi m}}}
+\end{equation}
+
+%% PROBLEM 1052 %%
+\section{Problem 1052}
+\textbf{(Wisconsin)}
+
+A cylinder contains a perfect gas in thermodynamic equilibrium at $p$, $V$, $T$, $U$ (internal energy) and $S$ (entropy). The cylinder is surrounded by a very large heat reservoir at the same temperature $T$. The piston is moved to produce a small volume change $\pm\Delta V$. For each of the five processes below show whether the changes in the other quantities have been positive, negative, or zero.
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Process & $\Delta T$ & $\Delta U$ & $\Delta S$ & $\Delta p$ \\
+\hline
+1. $(+\Delta V)$ (slow) (conduct) & 0 & 0 & $+$ & $-$ \\
+2. $(+\Delta V)$ (slow) (insulate) & $-$ & $-$ & 0 & $-$ \\
+3. $(+\Delta V)$ (fast) (insulate) & 0 & 0 & $+$ & $-$ \\
+4. $(+\Delta V)$ (fast) (conduct) & 0 & 0 & $+$ & $-$ \\
+5. $(-\Delta V)$ (fast) (conduct) & 0 & 0 & $-$ & $+$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Solution}
+
+\textbf{(1)} For isothermal expansion: $\Delta T = 0$, $\Delta U = 0$, and
+\begin{equation}
+\Delta S = R\frac{\Delta V}{V} > 0, \quad \Delta p = -\frac{p\Delta V}{V} < 0
+\end{equation}
+
+\textbf{(2)} For adiabatic expansion: $\Delta Q = 0$. Because the process proceeds very slowly it can be taken as a reversible process, then $\Delta S = 0$. The adiabatic process satisfies $pV^\gamma = \text{const}$. While $V$ increases, $p$ decreases ($\Delta p < 0$); and the internal energy decreases because work is done externally, thus $\Delta U < 0$, or $\Delta T < 0$.
+
+\textbf{(3)} The process is equivalent to adiabatic free expansion of an ideal gas, thus $\Delta S > 0$, $\Delta U = 0$, $\Delta T = 0$, $\Delta p < 0$.
+
+\textbf{(4)} The result is the same as that of isothermal free expansion, thus $\Delta T = 0$, $\Delta U = 0$, $\Delta S > 0$, $\Delta p < 0$.
+
+\textbf{(5)} The result is the same as that of isothermal free compression, thus $\Delta T = 0$, $\Delta U = 0$, $\Delta p > 0$, $\Delta S < 0$.
+
+%% PROBLEM 1053 %%
+\section{Problem 1053}
+\textbf{(MIT)}
+
+A thermally insulated box is separated into two compartments (volumes $V_1$ and $V_2$) by a membrane. One of the compartments contains an ideal gas at temperature $T$; the other is empty (vacuum). The membrane is suddenly removed, and the gas fills up the two compartments and reaches equilibrium.
+
+(a) What is the final temperature of the gas?
+
+(b) Show that the gas expansion process is irreversible.
+
+\subsection*{Solution}
+
+\textbf{(a)} Freely expanding gas does no external work and does not absorb heat. So the internal energy does not change, i.e., $dW = 0$. The internal energy of an ideal gas is only a function of temperature; as the temperature does not change in the process:
+\begin{equation}
+\boxed{T_f = T}
+\end{equation}
+
+\textbf{(b)} Assuming a quasi-static process of isothermal expansion, we can calculate the change in entropy resulting from the free expansion. In the process, we have $dS = pdV/T$, $pV = NkT$. Hence:
+\begin{equation}
+S_f - S = \int dS = \int \frac{p}{T}dV = Nk\ln\frac{V_1 + V_2}{V_1} > 0
+\end{equation}
+
+Thus the freely expanding process of the gas is irreversible.
+
+%% PROBLEM 1054 %%
+\section{Problem 1054}
+\textbf{(SUNY Buffalo)}
+
+A thermally conducting, uniform and homogeneous bar of length $L$, cross section $A$, density $\rho$ and specific heat at constant pressure $c_p$ is brought to a nonuniform temperature distribution by contact at one end with a hot reservoir at temperature $T_H$ and at the other end with a cold reservoir at temperature $T_C$. The bar is removed from the reservoirs, thermally insulated and kept at constant pressure. Show that the change in entropy of the bar is:
+\begin{equation}
+\Delta S = C_p\left[\ln\frac{T_f^2}{T_H T_C} + \frac{T_H + T_C}{T_f} - 2\right]
+\end{equation}
+where $C_p = c_p \rho AL$, and $T_f = (T_H + T_C)/2$.
+
+\subsection*{Solution}
+
+As the temperature gradient in the bar is $(T_H - T_C)/L$, the temperature at the cross section at a distance $x$ from the end at $T_C$ can be expressed by:
+\begin{equation}
+T_x = T_C + (T_H - T_C)\frac{x}{L}
+\end{equation}
+
+As the bar is adiabatically removed, we have:
+\begin{equation}
+\int_0^L c_p \rho A \, T_x \, dx = c_p \rho A L \, T_f
+\end{equation}
+
+from which we obtain $T_f = (T_H + T_C)/2$.
+
+The entropy change is:
+\begin{equation}
+\Delta S = \int_0^L c_p \rho A \ln\frac{T_f}{T_x} dx
+\end{equation}
+
+After integration:
+\begin{equation}
+\boxed{\Delta S = C_p\left[\ln\frac{T_f^2}{T_H T_C} + \frac{T_H + T_C}{T_f} - 2\right]}
+\end{equation}
+
+%% PROBLEM 1055 %%
+\section{Problem 1055}
+\textbf{(MIT)}
+
+Show that, for an ideal gas, the entropy can be expressed as:
+\begin{equation}
+S = C_V \ln T + nR\ln V + \text{const}
+\end{equation}
+
+\subsection*{Solution}
+
+For an ideal gas, from the first law:
+\begin{equation}
+dU = TdS - pdV
+\end{equation}
+
+Since $dU = nC_V dT$ and $p = nRT/V$:
+\begin{equation}
+dS = \frac{nC_V dT}{T} + \frac{nR\,dV}{V}
+\end{equation}
+
+Integrating:
+\begin{equation}
+\boxed{S = nC_V \ln T + nR\ln V + \text{const}}
+\end{equation}
+
+%% PROBLEM 1056 %%
+\section{Problem 1056}
+\textbf{(Wisconsin)}
+
+A vessel is divided into two parts of equal volumes by a partition. One part is filled with an ideal gas A, the other with an ideal gas B. Both gases are at the same temperature $T$ and pressure $p$. Assuming that A and B are chemically inert and that the vessel is thermally insulated, calculate the change in entropy that occurs after the partition is removed and equilibrium is reestablished.
+
+\subsection*{Solution}
+
+When the partition is removed, each gas expands freely to fill the entire vessel. Since the gases are ideal and chemically inert, they behave independently.
+
+For gas A, the entropy change is:
+\begin{equation}
+\Delta S_A = nR\ln\frac{2V}{V} = nR\ln 2
+\end{equation}
+
+Similarly for gas B:
+\begin{equation}
+\Delta S_B = nR\ln 2
+\end{equation}
+
+The total entropy change is:
+\begin{equation}
+\boxed{\Delta S = \Delta S_A + \Delta S_B = 2nR\ln 2}
+\end{equation}
+
+This is known as the \textbf{entropy of mixing}.
+
+%% PROBLEM 1057 %%
+\section{Problem 1057}
+\textbf{(Columbia)}
+
+An ideal monatomic gas at initial temperature $T_0$ is allowed to expand from $V_0$ to $2V_0$ in three different ways: (a) isothermally, (b) adiabatically, and (c) at constant pressure. For each case, calculate the work done by the gas, the heat added, and the changes in internal energy and entropy.
+
+\subsection*{Solution}
+
+For 1 mole of ideal monatomic gas: $C_V = \frac{3}{2}R$, $C_p = \frac{5}{2}R$, $\gamma = \frac{5}{3}$.
+
+\textbf{(a) Isothermal expansion:}
+\begin{align}
+W &= RT_0\ln 2 \\
+\Delta U &= 0 \quad \text{(isothermal)} \\
+Q &= W = RT_0\ln 2 \\
+\Delta S &= R\ln 2
+\end{align}
+
+\textbf{(b) Adiabatic expansion:}
+\begin{equation}
+T_f = T_0 \left(\frac{V_0}{2V_0}\right)^{\gamma-1} = T_0 \cdot 2^{-2/3}
+\end{equation}
+\begin{align}
+Q &= 0 \\
+\Delta U &= C_V(T_f - T_0) = \frac{3}{2}RT_0(2^{-2/3} - 1) \\
+W &= -\Delta U = \frac{3}{2}RT_0(1 - 2^{-2/3}) \\
+\Delta S &= 0 \quad \text{(reversible adiabatic)}
+\end{align}
+
+\textbf{(c) Constant pressure expansion:}
+\begin{equation}
+T_f = 2T_0 \quad \text{(since } V \propto T \text{ at constant } p\text{)}
+\end{equation}
+\begin{align}
+W &= p\Delta V = RT_0 \\
+\Delta U &= C_V \Delta T = \frac{3}{2}RT_0 \\
+Q &= \Delta U + W = \frac{5}{2}RT_0 \\
+\Delta S &= C_p\ln\frac{T_f}{T_0} = \frac{5}{2}R\ln 2
+\end{align}
+
+%% PROBLEM 1058 %%
+\section{Problem 1058}
+\textbf{(Berkeley)}
+
+One mole of an ideal gas initially at $T_1 = 0^\circ$C is heated at constant volume to $T_2 = 100^\circ$C. What is the change in entropy?
+
+\subsection*{Solution}
+
+At constant volume:
+\begin{equation}
+\Delta S = \int_{T_1}^{T_2} \frac{C_V dT}{T} = C_V \ln\frac{T_2}{T_1}
+\end{equation}
+
+For one mole of ideal gas:
+\begin{equation}
+\boxed{\Delta S = C_V \ln\frac{373}{273}}
+\end{equation}
+
+For a monatomic gas ($C_V = \frac{3}{2}R$): $\Delta S = 3.86$ J/K
+
+For a diatomic gas ($C_V = \frac{5}{2}R$): $\Delta S = 6.44$ J/K
+
+%% PROBLEM 1059 %%
+\section{Problem 1059}
+\textbf{(Wisconsin)}
+
+A resistor of 1000 $\Omega$ is connected to a 100 V battery for 10 s. The resistor is kept at a constant temperature of $27^\circ$C in a large bath.
+
+(a) What is the change of entropy of the resistor?
+
+(b) What is the change of entropy of the bath?
+
+(c) What is the change of entropy of the system (resistor + bath)?
+
+\subsection*{Solution}
+
+\textbf{(a)} The resistor is at constant temperature, so:
+\begin{equation}
+\boxed{\Delta S_{\text{resistor}} = 0}
+\end{equation}
+
+\textbf{(b)} The heat generated in the resistor and absorbed by the bath is:
+\begin{equation}
+Q = \frac{V^2}{R}t = \frac{(100)^2}{1000} \times 10 = 100 \text{ J}
+\end{equation}
+
+The entropy change of the bath is:
+\begin{equation}
+\boxed{\Delta S_{\text{bath}} = \frac{Q}{T} = \frac{100}{300} = 0.333 \text{ J/K}}
+\end{equation}
+
+\textbf{(c)} The total entropy change of the system is:
+\begin{equation}
+\boxed{\Delta S_{\text{total}} = 0 + 0.333 = 0.333 \text{ J/K}}
+\end{equation}
+
+This is positive, confirming that the process is irreversible.
+
+%% PROBLEM 1060 %%
+\section{Problem 1060}
+\textbf{(Columbia)}
+
+Two equal quantities of the same ideal gas are initially at the same pressure $p$ but at different temperatures $T_1$ and $T_2$ ($T_1 > T_2$). They are then allowed to interact thermally at constant total volume. Find the change in total entropy.
+
+\subsection*{Solution}
+
+Let each quantity be $n$ moles. The final temperature is:
+\begin{equation}
+T_f = \frac{T_1 + T_2}{2}
+\end{equation}
+
+The entropy change for the first quantity (cooling from $T_1$ to $T_f$):
+\begin{equation}
+\Delta S_1 = nC_V \ln\frac{T_f}{T_1}
+\end{equation}
+
+The entropy change for the second quantity (heating from $T_2$ to $T_f$):
+\begin{equation}
+\Delta S_2 = nC_V \ln\frac{T_f}{T_2}
+\end{equation}
+
+Total entropy change:
+\begin{equation}
+\Delta S = \Delta S_1 + \Delta S_2 = nC_V \ln\frac{T_f^2}{T_1 T_2} = nC_V \ln\frac{(T_1 + T_2)^2}{4T_1 T_2}
+\end{equation}
+
+Since $(T_1 + T_2)^2 > 4T_1 T_2$ for $T_1 \neq T_2$:
+\begin{equation}
+\boxed{\Delta S = nC_V \ln\frac{(T_1 + T_2)^2}{4T_1 T_2} > 0}
+\end{equation}

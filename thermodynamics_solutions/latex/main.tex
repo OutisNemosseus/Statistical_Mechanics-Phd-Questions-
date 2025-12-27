@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10}
+}
+
+\title{\Huge\textbf{Problems and Solutions on Thermodynamics \& Statistical Mechanics}\\[1cm]
+\Large Complete LaTeX and Code Reference}
+\author{Compiled from SM10-110}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\part{Thermodynamics}
+
+\chapter{Thermodynamic States and the First Law (1001-1030)}
+\input{chapter1_first_law/problems_1001_1010}
+\input{chapter1_first_law/problems_1011_1020}
+\input{chapter1_first_law/problems_1021_1030}
+
+\chapter{The Second Law and Entropy (1031-1072)}
+\input{chapter2_entropy/problems_1031_1040}
+\input{chapter2_entropy/problems_1041_1050}
+\input{chapter2_entropy/problems_1051_1060}
+\input{chapter2_entropy/problems_1061_1072}
+
+\chapter{Thermodynamic Functions and Equilibrium Conditions (1073-1105)}
+\input{chapter3_functions/problems_1073_1085}
+\input{chapter3_functions/problems_1086_1100}
+\input{chapter3_functions/problems_1101_1105}
+
+\end{document}

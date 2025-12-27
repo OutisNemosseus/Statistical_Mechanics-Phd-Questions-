@@ -1,0 +1,63 @@
+% Problems 1101-1105: Thermodynamic Functions (final section)
+
+\section{Problems 1101-1105}
+
+Final problems in this chapter covering:
+\begin{itemize}
+\item Atmospheric models
+\item Gas pressure with altitude
+\item Temperature gradients
+\end{itemize}
+
+%% PROBLEM 1101 %%
+\section{Problem 1101}
+\textbf{(Columbia)}
+
+Suppose that the earth's atmosphere is an ideal gas with molecular weight $\mu$ and that the gravitational field near the surface is uniform.
+
+(a) Show that the pressure varies as:
+\begin{equation}
+\frac{dp}{p} = -\frac{\mu g}{RT}dz
+\end{equation}
+
+(b) For an adiabatic atmosphere, show that:
+\begin{equation}
+\frac{dT}{dz} = -\frac{(\gamma-1)}{\gamma}\frac{\mu g}{R}
+\end{equation}
+
+(c) Evaluate $dT/dz$ for a pure N$_2$ atmosphere with $\gamma = 1.4$.
+
+(d) Find $p(z)$ for an isothermal atmosphere.
+
+(e) Find $p(z)$ for an adiabatic atmosphere.
+
+\subsection*{Solution}
+
+\textbf{(a)} From hydrostatic equilibrium: $dp = -\rho g\,dz$
+
+Using ideal gas law $p = \rho RT/\mu$:
+\begin{equation}
+\boxed{\frac{dp}{p} = -\frac{\mu g}{RT}dz}
+\end{equation}
+
+\textbf{(b)} For adiabatic process: $T^{\gamma/(1-\gamma)}p = \text{const}$
+
+This gives:
+\begin{equation}
+\boxed{\frac{dT}{dz} = -\frac{(\gamma-1)}{\gamma}\frac{\mu g}{R}}
+\end{equation}
+
+\textbf{(c)} For N$_2$ ($\mu = 28$ g/mol, $\gamma = 1.4$):
+\begin{equation}
+\frac{dT}{dz} = -\frac{0.4}{1.4}\frac{0.028 \times 9.8}{8.314} = \boxed{-9.8 \text{ K/km}}
+\end{equation}
+
+\textbf{(d)} Isothermal atmosphere ($T = T_0$):
+\begin{equation}
+\boxed{p(z) = p_0 \exp\left(-\frac{\mu gz}{RT_0}\right)}
+\end{equation}
+
+\textbf{(e)} Adiabatic atmosphere:
+\begin{equation}
+\boxed{p(z) = p_0\left[1 - \frac{(\gamma-1)}{\gamma}\frac{\mu gz}{RT_0}\right]^{\gamma/(\gamma-1)}}
+\end{equation}

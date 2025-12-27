@@ -1,0 +1,216 @@
+% Problems 1001-1010: Thermodynamic States and the First Law
+
+%% PROBLEM 1001 %%
+\section{Problem 1001}
+\textbf{(Wisconsin)}
+
+Describe briefly the basic principle of the following instruments for making temperature measurements and state in one sentence the special usefulness of each instrument: constant-volume gas thermometer, thermocouple, thermistor.
+
+\subsection*{Solution}
+
+\textbf{Constant-volume gas thermometer:} It is made according to the principle that the pressure of a gas changes with its temperature while its volume is kept constant. It can approximately be used as an ideal gas thermometer.
+
+\textbf{Thermocouple thermometer:} It is made according to the principle that thermoelectric motive force changes with temperature. The relation between the thermoelectric motive force and the temperature is:
+\begin{equation}
+\varepsilon = a + bt + ct^2 + dt^3
+\end{equation}
+where $\varepsilon$ is the electric motive force, $t$ is the difference of temperatures of the two junctions, and $a$, $b$, $c$, $d$ are constants. The range of measurement is very wide, from $-200^\circ$C to $1600^\circ$C. It is used as a practical standard thermometer in the range from $630.74^\circ$C to $1064.43^\circ$C.
+
+\textbf{Thermistor thermometer:} We measure temperature by measuring the resistance of a metal. The precision of a thermistor made of pure platinum is very good, and its range of measurement is very wide, so it is usually used as a standard thermometer in the range from 13.81K to 903.89K.
+
+%% PROBLEM 1002 %%
+\section{Problem 1002}
+\textbf{(Wisconsin)}
+
+Describe briefly three different instruments that can be used for the accurate measurement of temperature and state roughly the temperature range in which they are useful and one important advantage of each instrument. Include at least one instrument that is capable of measuring temperatures down to 1K.
+
+\subsection*{Solution}
+
+\textbf{1. Magnetic thermometer:} Its principle is Curie's law:
+\begin{equation}
+\chi = \frac{C}{T}
+\end{equation}
+where $\chi$ is the susceptibility of the paramagnetic substance used, $T$ is its absolute temperature, and $C$ is a constant. Its advantage is that it can measure temperatures below 1K.
+
+\textbf{2. Optical pyrometer:} It is based on the principle that we can find the temperature of a hot body by measuring the energy radiated from it, using the formula of radiation. While taking measurements, it does not come into direct contact with the measured body. Therefore, it is usually used to measure the temperatures of celestial bodies.
+
+\textbf{3. Vapor pressure thermometer:} It is a kind of thermometer used to measure low temperatures. Its principle is as follows: There exists a definite relation between the saturation vapor pressure of a chemically pure material and its boiling point. If this relation is known, we can determine temperature by measuring vapor pressure. It can measure temperatures greater than 14K, and is the thermometer usually used to measure low temperatures.
+
+%% PROBLEM 1003 %%
+\section{Problem 1003}
+\textbf{(Wisconsin)}
+
+A bimetallic strip of total thickness $x$ is straight at temperature $T$. What is the radius of curvature of the strip, $R$, when it is heated to temperature $T + \Delta T$? The coefficients of linear expansion of the two metals are $\alpha_1$ and $\alpha_2$, respectively, with $\alpha_2 > \alpha_1$. You may assume that each metal has thickness $x/2$, and you may assume that $x \ll R$.
+
+\subsection*{Solution}
+
+We assume that the initial length is $l_0$. After heating, the lengths of the mid-lines of the two metallic strips are respectively:
+\begin{align}
+l_1 &= l_0(1 + \alpha_1 \Delta T) \\
+l_2 &= l_0(1 + \alpha_2 \Delta T)
+\end{align}
+
+Assuming that the radius of curvature is $R$, the subtending angle of the strip is $\theta$, and the change of thickness is negligible, we have:
+\begin{equation}
+l_2 - l_1 = \frac{x}{2}\theta
+\end{equation}
+
+Also:
+\begin{equation}
+l_1 + l_2 = 2R\theta = 2l_0[2 + (\alpha_1 + \alpha_2)\Delta T]
+\end{equation}
+
+From these equations we obtain:
+\begin{equation}
+\boxed{R = \frac{x}{(\alpha_2 - \alpha_1)\Delta T}}
+\end{equation}
+
+%% PROBLEM 1004 %%
+\section{Problem 1004}
+\textbf{(Wisconsin)}
+
+An ideal gas is originally confined to a volume $V_1$ in an insulated container of volume $V_1 + V_2$. The remainder of the container is evacuated. The partition is then removed and the gas expands to fill the entire container. If the initial temperature of the gas was $T$, what is the final temperature? Justify your answer.
+
+\subsection*{Solution}
+
+This is a process of adiabatic free expansion of an ideal gas. The internal energy does not change; thus the temperature does not change, that is, the final temperature is still $\boxed{T}$.
+
+%% PROBLEM 1005 %%
+\section{Problem 1005}
+\textbf{(Columbia)}
+
+An insulated chamber is divided into two halves of volumes. The left half contains an ideal gas at temperature $T_0$ and the right half is evacuated. A small hole is opened between the two halves, allowing the gas to flow through, and the system comes to equilibrium. No heat is exchanged with the walls. Find the final temperature of the system.
+
+\subsection*{Solution}
+
+After a hole has been opened, the gas flows continuously to the right side and reaches equilibrium finally. During the process, internal energy of the system $E$ is unchanged. Since $E$ depends on the temperature $T$ only for an ideal gas, the equilibrium temperature is still $\boxed{T_0}$.
+
+%% PROBLEM 1006 %%
+\section{Problem 1006}
+\textbf{(UC Berkeley)}
+
+Define heat capacity $C_v$ and calculate from the first principle the numerical value (in calories/$^\circ$C) for a copper penny in your pocket, using your best physical knowledge or estimate of the needed parameters.
+
+\subsection*{Solution}
+
+\begin{equation}
+C_v = \left(\frac{dQ}{dT}\right)_V
+\end{equation}
+
+The atomic number of copper is 64 and a copper penny is about 32 g, i.e., 0.5 mol. Thus:
+\begin{equation}
+\boxed{C_v = 0.5 \times 3R = 13 \text{ J/K}}
+\end{equation}
+
+%% PROBLEM 1007 %%
+\section{Problem 1007}
+\textbf{(Columbia)}
+
+Specific heat of granite may be: 0.02, 0.2, 20, 2000 cal/g$\cdot$K.
+
+\subsection*{Solution}
+
+The main component of granite is CaCO$_3$; its molecular weight is 100. The specific heat is:
+\begin{equation}
+C = \frac{3R}{100} = 0.25 \text{ cal/g} \cdot \text{K}
+\end{equation}
+
+Thus the best answer is $\boxed{0.2 \text{ cal/g}\cdot\text{K}}$.
+
+%% PROBLEM 1008 %%
+\section{Problem 1008}
+\textbf{(UC Berkeley)}
+
+The figure shows an apparatus for the determination of $C_p/C_v$ for a gas, according to the method of Clement and Desormes. A bottle G, of reasonable capacity (say a few litres), is fitted with a tap H, and a manometer M. The difference in pressure between the inside and the outside can thus be determined by observation of the difference $h$ in heights of the two columns in the manometer. The bottle is filled with the gas to be investigated, at a very slight excess pressure over the outside atmospheric pressure.
+
+(a) Derive an expression for $C_p/C_v$ in terms of $h_i$ and $h_f$ in the above experiment.
+
+(b) Suppose that the gas in question is oxygen. What is your theoretical prediction for $C_p/C_v$ at $20^\circ$C, within the framework of statistical mechanics?
+
+\subsection*{Solution}
+
+(a) The equation of state of ideal gas is $pV = nkT$. Since the initial and final $T$, $V$ of the gas in the bottle are the same, we have $p_f/p_i = n_f/n_i$.
+
+Meanwhile, $n_f/n_i = V/V'$, where $V'$ is the volume when the initial gas in the bottle expands adiabatically to pressure $p_0$. Therefore:
+\begin{equation}
+\frac{V'}{V} = \left(\frac{p_i}{p_0}\right)^{1/\gamma} = \left(\frac{p_f}{p_0}\right)^{1/\gamma}
+\end{equation}
+
+Since $h_i/h_0 \ll 1$ and $h_f/h_0 \ll 1$, we have:
+\begin{equation}
+\boxed{\gamma = \frac{h_i}{h_i - h_f}}
+\end{equation}
+
+(b) Oxygen consists of diatomic molecules. When $t = 20^\circ$C, only the translational and rotational motions of the molecules contribute to the specific heat. Therefore:
+\begin{equation}
+\boxed{\gamma = \frac{C_p}{C_v} = \frac{7/2}{5/2} = \frac{7}{5} = 1.4}
+\end{equation}
+
+%% PROBLEM 1009 %%
+\section{Problem 1009}
+\textbf{(SUNY Buffalo)}
+
+(a) Starting with the first law of thermodynamics and the definitions of $c_p$ and $c_v$, show that:
+\begin{equation}
+c_p - c_v = \left[p + \left(\frac{\partial U}{\partial V}\right)_T\right]\left(\frac{\partial V}{\partial T}\right)_p
+\end{equation}
+
+(b) Use the above results plus the expression:
+\begin{equation}
+p + \left(\frac{\partial U}{\partial V}\right)_T = T\left(\frac{\partial p}{\partial T}\right)_V
+\end{equation}
+to find $c_p - c_v$ for a Van der Waals gas:
+\begin{equation}
+\left(p + \frac{a}{V^2}\right)(V-b) = RT
+\end{equation}
+
+\subsection*{Solution}
+
+(a) From $H = U + pV$, we obtain:
+\begin{equation}
+\left(\frac{\partial H}{\partial T}\right)_p = \left(\frac{\partial U}{\partial T}\right)_p + p\left(\frac{\partial V}{\partial T}\right)_p
+\end{equation}
+
+Let $U = U[T, V(T,p)]$. The above expression becomes:
+\begin{equation}
+c_p = c_v + \left[\left(\frac{\partial U}{\partial V}\right)_T + p\right]\left(\frac{\partial V}{\partial T}\right)_p
+\end{equation}
+
+Hence:
+\begin{equation}
+\boxed{c_p - c_v = \left[p + \left(\frac{\partial U}{\partial V}\right)_T\right]\left(\frac{\partial V}{\partial T}\right)_p}
+\end{equation}
+
+(b) For the Van der Waals gas, we have:
+\begin{equation}
+c_p - c_v = \frac{R}{1 - \frac{2a(1 - b/V)^2}{VRT}}
+\end{equation}
+
+When $V \to \infty$, $c_p - c_v \to R$, which is just the result for an ideal gas.
+
+%% PROBLEM 1010 %%
+\section{Problem 1010}
+\textbf{(Wisconsin)}
+
+One mole of gas obeys Van der Waals equation of state. If its molar internal energy is given by $u = cT - a/V$ (in which $V$ is the molar volume, $a$ is one of the constants in the equation of state, and $c$ is a constant), calculate the molar heat capacities $C_v$ and $C_p$.
+
+\subsection*{Solution}
+
+\begin{equation}
+C_v = \left(\frac{\partial u}{\partial T}\right)_V = c
+\end{equation}
+
+For $C_p$:
+\begin{equation}
+\frac{\partial H}{\partial T} = \left(\frac{\partial U}{\partial T}\right)_V + \left[\left(\frac{\partial U}{\partial V}\right)_T + p\right]\left(\frac{\partial V}{\partial T}\right)_p
+\end{equation}
+
+From the Van der Waals equation $(p + a/V^2)(V-b) = RT$, we obtain:
+\begin{equation}
+\left(\frac{\partial V}{\partial T}\right)_p = \frac{R}{p - \frac{a}{V^2} + \frac{2ab}{V^3}}
+\end{equation}
+
+Therefore:
+\begin{equation}
+\boxed{C_p = c + \frac{R}{1 - \frac{2a(V-b)^2}{RTV^3}}}
+\end{equation}

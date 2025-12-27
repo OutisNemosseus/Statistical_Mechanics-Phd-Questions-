@@ -1,0 +1,323 @@
+% Problems 1021-1030: Thermodynamic States and the First Law
+
+%% PROBLEM 1021 %%
+\section{Problem 1021}
+\textbf{(Wisconsin)}
+
+Two systems with heat capacities $C_1$ and $C_2$, respectively, interact thermally and come to a common temperature $T_f$. If the initial temperature of system 1 was $T_1$, what was the initial temperature of system 2? You may assume that the total energy of the combined systems remains constant.
+
+\subsection*{Solution}
+
+We assume that the initial temperature of system 2 is $T_2$. According to the conservation of energy, we know the heat released from system 1 is equal to that absorbed by the other system, i.e.:
+\begin{equation}
+C_1(T_1 - T_f) = C_2(T_f - T_2)
+\end{equation}
+
+The solution is:
+\begin{equation}
+\boxed{T_2 = \frac{C_1}{C_2}(T_f - T_1) + T_f}
+\end{equation}
+
+%% PROBLEM 1022 %%
+\section{Problem 1022}
+\textbf{(CUSPEA)}
+
+A large solenoid coil for a physics experiment is made of a single layer of conductor of cross section 4 cm $\times$ 2 cm with a cooling water hole 2 cm $\times$ 1 cm in the conductor. The coil, which consists of 100 turns, has a diameter of 3 meters, and a length of 4 meters. A magnetic field of 0.25 Tesla is desired. The conductor is made of aluminium.
+
+(a) What power (in kilowatts) must be supplied to provide the desired field, and what must be the voltage of the power supply?
+
+(b) What rate of water flow (litres/second) must be supplied to keep the temperature rise of the water at $40^\circ$C?
+
+(c) What is the outward pressure exerted on the coil by the magnetic forces?
+
+(d) If the coil is energized by connecting it to the design voltage calculated in (a), how much time is required to go from zero current to 99\% of the design current?
+
+The resistivity of aluminium is $3 \times 10^{-8}$ ohm-meters.
+
+\subsection*{Solution}
+
+\textbf{(a)} The magnetic field is $B = \mu_0 NI/L$, where $N$ is the number of turns, $L$ is the length of the solenoid coil. The current is therefore:
+\begin{equation}
+I = \frac{BL}{\mu_0 N} = \frac{0.25 \times 4}{4\pi \times 10^{-7} \times 100} = 7960 \text{ A}
+\end{equation}
+
+The total resistance of the coil is $R = \rho L/A$. Therefore, the resistance, the voltage and the power are respectively:
+\begin{align}
+R &= \frac{(3 \times 10^{-8})(100 \times 2\pi \times 1.5)}{(4 \times 2 - 2 \times 1) \times 10^{-4}} = 0.047\Omega \\
+V &= RI = 375 \text{ V} \\
+P &= VI = \boxed{2.99 \times 10^3 \text{ kW}}
+\end{align}
+
+\textbf{(b)} The rate of flow of the cooling water is $W$. Then $\rho W C \Delta T = P$, where $\rho$ is the density, $C$ is the specific heat and $\Delta T$ is the temperature rise of the water. Hence:
+\begin{equation}
+W = \frac{P}{\rho C \Delta T} = \frac{2.99 \times 10^3 \times 10^3}{1 \times 4190 \times 40} = \boxed{17.8 \text{ L/s}}
+\end{equation}
+
+\textbf{(c)} The magnetic pressure is:
+\begin{equation}
+p = \frac{B^2}{2\mu_0} = \frac{(0.25)^2}{2(4\pi \times 10^{-7})} = \boxed{2.49 \times 10^4 \text{ N/m}^2}
+\end{equation}
+
+\textbf{(d)} The time constant of the circuit is $\tau = L/R$, with $L = N\Phi/I$, where $L$ is the inductance, $R$ is the resistance, $N$ is the number of turns, $I$ is the current and $\Phi$ is the magnetic flux. Thus we have:
+\begin{align}
+L &= 100 \times 0.25\pi \times (1.5)^2/7960 = 0.0222 \text{ H} \\
+\tau &= 0.0222/0.047 = 0.471 \text{ s}
+\end{align}
+
+The variation of the current before steady state is reached is given by:
+\begin{equation}
+I(t) = I_{\max}[1 - \exp(-t/\tau)]
+\end{equation}
+
+When $I(t)/I_{\max} = 99\%$:
+\begin{equation}
+t = \tau \ln 100 = 4.6\tau \approx \boxed{2.17 \text{ s}}
+\end{equation}
+
+%% PROBLEM 1023 %%
+\section{Problem 1023}
+\textbf{(UC Berkeley)}
+
+Consider a black sphere of radius $R$ at temperature $T$ which radiates to distant black surroundings at $T = 0$ K.
+
+(a) Surround the sphere with a nearby heat shield in the form of a black shell whose temperature is determined by radiative equilibrium. What is the temperature of the shell and what is the effect of the shell on the total power radiated to the surroundings?
+
+(b) How is the total power radiated affected by additional heat shields?
+
+\subsection*{Solution}
+
+\textbf{(a)} At radiative equilibrium, $J - J_1 = J_1$ or $J_1 = J/2$. Therefore:
+\begin{equation}
+T_1^4 = T^4/2, \quad \text{or} \quad \boxed{T_1 = T/2^{1/4}}
+\end{equation}
+
+\textbf{(b)} The heat shield reduces the total power radiated to half of the initial value. This is because the shield radiates a part of the energy it absorbs back to the black sphere.
+
+%% PROBLEM 1024 %%
+\section{Problem 1024}
+\textbf{(UC Berkeley)}
+
+In vacuum insulated cryogenic vessels (Dewars), the major source of heat transferred to the inner container is by radiation through the vacuum jacket. Idealize this situation by considering two infinite sheets with emissivity = 1 separated by a vacuum space. The temperatures of the sheets are $T_1$ and $T_2$ ($T_2 > T_1$). Calculate the energy flux (at equilibrium) between them. Consider a third sheet (the heat shield) placed between the two which has a reflectivity of $R$. Find the equilibrium temperature of this sheet. Calculate the energy flux from sheet 2 to sheet 1 when this heat shield is in place.
+
+For $T_2$ = room temperature, $T_1$ = liquid He temperature (4.2 K) find the temperature of a heat shield that has a reflectivity of 95\%. Compare the energy flux with and without this heat shield.
+
+($\sigma = 0.55 \times 10^{-7}$ watts/m$^2$K$^4$)
+
+\subsection*{Solution}
+
+When there is no "heat shield", the energy flux is:
+\begin{equation}
+J = E_2 - E_1 = \sigma(T_2^4 - T_1^4)
+\end{equation}
+
+When "heat shield" is added, we have:
+\begin{align}
+J' &= E_2 - RE_2 - (1-R)E_3 \\
+J' &= (1-R)E_3 + RE_1 - E_1
+\end{align}
+
+These equations imply $E_3 = (E_1 + E_2)/2$, or:
+\begin{equation}
+\boxed{T_3 = \left[\frac{T_1^4 + T_2^4}{2}\right]^{1/4}}
+\end{equation}
+
+Hence:
+\begin{equation}
+J^* = (1-R)(E_2 - E_1)/2 = (1-R)J/2
+\end{equation}
+
+With $T_1 = 4.2$ K, $T_2 = 300$ K and $R = 0.95$, we have:
+\begin{equation}
+\boxed{T_3 = 252 \text{ K} \quad \text{and} \quad J^*/J = 0.025}
+\end{equation}
+
+%% PROBLEM 1025 %%
+\section{Problem 1025}
+\textbf{(SUNY Buffalo)}
+
+Two parallel plates in vacuum, separated by a distance which is small compared with their linear dimensions, are at temperatures $T_1$ and $T_2$ respectively ($T_1 > T_2$).
+
+(a) If the plates are non-transparent to radiation and have emission powers $e_1$ and $e_2$ respectively, show that the net energy transferred per unit area per second is:
+\begin{equation}
+W = \frac{E_1 - E_2}{\frac{E_1}{e_1} + \frac{E_2}{e_2} - 1}
+\end{equation}
+where $E_1$ and $E_2$ are the emission powers of black bodies at temperatures $T_1$ and $T_2$ respectively.
+
+(b) Hence, what is $W$ if $T_1$ is 300 K and $T_2$ is 4.2 K, and the plates are black bodies?
+
+(c) What will $W$ be if $n$ identical black body plates are interspersed between the two plates in (b)?
+
+($\sigma = 5.67 \times 10^{-8}$ W/m$^2$K$^4$)
+
+\subsection*{Solution}
+
+\textbf{(a)} Let $f_1$ and $f_2$ be the total emission powers (thermal radiation plus reflection) of the two plates respectively. We have the system of equations that leads to:
+\begin{equation}
+\boxed{W = f_1 - f_2 = \frac{E_1 e_1 - E_2 e_2}{\frac{e_2}{e_1} + \frac{e_1}{e_2} - 1}}
+\end{equation}
+
+\textbf{(b)} For black bodies:
+\begin{equation}
+W = E_1 - E_2 = \sigma(T_1^4 - T_2^4) = \boxed{460 \text{ W/m}^2}
+\end{equation}
+
+\textbf{(c)} In the general case with $n$ interspersed plates:
+\begin{equation}
+\boxed{W = \frac{\sigma(T_1^4 - T_2^4)}{n+1}}
+\end{equation}
+
+%% PROBLEM 1026 %%
+\section{Problem 1026}
+\textbf{(SUNY Buffalo)}
+
+A spherical black body of radius $r$ at absolute temperature $T$ is surrounded by a thin spherical and concentric shell of radius $R$, black on both sides. Show that the factor by which this radiation shield reduces the rate of cooling of the body is given by the following expression: $aR^2/(R^2 + br^2)$, and find the numerical coefficients $a$ and $b$.
+
+\subsection*{Solution}
+
+Let the surrounding temperature be $T_0$. The rate of energy loss of the black body before being surrounded by the spherical shell is:
+\begin{equation}
+Q = 4\pi r^2 \sigma(T^4 - T_0^4)
+\end{equation}
+
+The energy loss per unit time by the black body after being surrounded by the shell is:
+\begin{equation}
+Q' = 4\pi r^2 \sigma(T^4 - T_1^4)
+\end{equation}
+where $T_1$ is the temperature of the shell.
+
+The energy loss per unit time by the shell is:
+\begin{equation}
+Q'' = 4\pi R^2 \sigma(T_1^4 - T_0^4)
+\end{equation}
+
+Since $Q'' = Q'$, we obtain:
+\begin{equation}
+T_1^4 = \frac{r^2 T^4 + R^2 T_0^4}{R^2 + r^2}
+\end{equation}
+
+Hence:
+\begin{equation}
+Q'/Q = R^2/(R^2 + r^2)
+\end{equation}
+
+Therefore: $\boxed{a = 1 \text{ and } b = 1}$
+
+%% PROBLEM 1027 %%
+\section{Problem 1027}
+\textbf{(MIT)}
+
+The solar constant (radiant flux at the surface of the earth) is about 0.1 W/cm$^2$. Find the temperature of the sun assuming that it is a black body.
+
+\subsection*{Solution}
+
+The radiant flux density of the sun is:
+\begin{equation}
+J = \sigma T^4
+\end{equation}
+where $\sigma = 5.7 \times 10^{-8}$ W/m$^2$K$^4$. Hence:
+\begin{equation}
+\sigma T^4 (r_S/r_{SE})^2 = 0.1 \text{ W/cm}^2
+\end{equation}
+where the radius of the sun $r_S = 7.0 \times 10^5$ km, the distance between the earth and the sun $r_{SE} = 1.5 \times 10^8$ km. Thus:
+\begin{equation}
+\boxed{T \approx 6000 \text{ K}}
+\end{equation}
+
+%% PROBLEM 1028 %%
+\section{Problem 1028}
+\textbf{(Columbia)}
+
+(a) Estimate the temperature of the sun's surface given that the sun subtends an angle $\theta$ as seen from the earth and the earth's surface temperature is $T_0$. (Assume the earth's surface temperature is uniform, and that the earth reflects a fraction, $\varepsilon$, of the solar radiation incident upon it).
+
+(b) Within an unheated glass house on the earth's surface the temperature is generally greater than $T_0$. Why? What can you say about the maximum possible interior temperature in principle?
+
+\subsection*{Solution}
+
+\textbf{(a)} The earth radiates heat while it is absorbing heat from the solar radiation. Assume that the sun can be taken as a black body. Because of reflection, the earth is a grey body of emissivity $1 - \varepsilon$. The equilibrium condition gives:
+
+From the Stefan-Boltzmann law:
+\begin{align}
+&\text{for the sun:} \quad J_S = \sigma T_S^4 \\
+&\text{for the earth:} \quad J_E = (1-\varepsilon)\sigma T_E^4
+\end{align}
+
+Therefore:
+\begin{equation}
+T_S = T_E/\sqrt{\tan(\theta/2)} \approx 300\text{ K} \times \sqrt{\frac{1.5 \times 10^8}{7 \times 10^5}} \approx \boxed{6000 \text{ K}}
+\end{equation}
+
+\textbf{(b)} Let $T$ be temperature of the glass house and $t$ be the transmission coefficient of glass. Then:
+\begin{equation}
+(1-t)T^4 + tT_0^4 = tT^4
+\end{equation}
+giving:
+\begin{equation}
+T^4 = \frac{t}{2t-1}T_0^4
+\end{equation}
+
+Since $t < 1$, we have $t > 2t - 1$, so that $\boxed{T > T_0}$.
+
+%% PROBLEM 1029 %%
+\section{Problem 1029}
+\textbf{(Princeton)}
+
+Consider an idealized sun and earth, both black bodies, in otherwise empty flat space. The sun is at a temperature of $T_S = 6000$ K and heat transfer by oceans and atmosphere on the earth is so effective as to keep the earth's surface temperature uniform. The radius of the earth is $R_E = 6 \times 10^8$ cm, the radius of the sun is $R_S = 7 \times 10^{10}$ cm, and the earth-sun distance is $d = 1.5 \times 10^{13}$ cm.
+
+(a) Find the temperature of the earth.
+
+(b) Find the radiation force on the earth.
+
+(c) Compare these results with those for an interplanetary "chondrule" in the form of a spherical, perfectly conducting black-body with a radius of $R = 0.1$ cm, moving in a circular orbit around the sun with a radius equal to the earth-sun distance $d$.
+
+\subsection*{Solution}
+
+\textbf{(a)} The radiation received per second by the earth from the sun is approximately:
+\begin{equation}
+q_{SE} = \sigma T_S^4 \cdot 4\pi R_S^2 \cdot \frac{\pi R_E^2}{4\pi d^2}
+\end{equation}
+
+The radiation per second from the earth itself is:
+\begin{equation}
+Q_E = \sigma T_E^4 \cdot 4\pi R_E^2
+\end{equation}
+
+Neglecting the earth's own heat sources, energy conservation leads to:
+\begin{equation}
+T_E = T_S \sqrt{\frac{R_S}{2d}} = \boxed{290 \text{ K} = 17^\circ\text{C}}
+\end{equation}
+
+\textbf{(b)} The radiation force is:
+\begin{equation}
+F = \frac{q_{SE}}{c} = \boxed{6 \times 10^8 \text{ N}}
+\end{equation}
+
+\textbf{(c)} As $R_E \to R$:
+\begin{align}
+T &= T_E = 17^\circ\text{C} \\
+F &= (R/R_E)^2 F_E = \boxed{1.7 \times 10^{-10} \text{ N}}
+\end{align}
+
+%% PROBLEM 1030 %%
+\section{Problem 1030}
+\textbf{(Wisconsin)}
+
+Making reasonable assumptions, estimate the surface temperature of Neptune. Neglect any possible internal sources of heat. What assumptions have you made about the planet's surface and/or atmosphere?
+
+Astronomical data: radius of sun = $7 \times 10^5$ km; radius of Neptune = $2.2 \times 10^4$ km; mean sun-earth distance = $1.5 \times 10^8$ km; mean sun-Neptune distance = $4.5 \times 10^9$ km; $T_S = 6000$ K; rate at which sun's radiation reaches earth = 1.4 kW/m$^2$; Stefan-Boltzmann constant = $5.7 \times 10^{-8}$ W/m$^2$K$^4$.
+
+\subsection*{Solution}
+
+We assume that the surface of Neptune and the thermodynamics of its atmosphere are similar to those of the earth. The radiation flux on the earth's surface is:
+\begin{equation}
+J_E = \frac{4\pi R_S^2 \sigma T_S^4}{4\pi R_{SE}^2}
+\end{equation}
+
+The equilibrium condition on Neptune's surface gives:
+\begin{equation}
+R_{SE}^2 J_E / R_{SN}^2 = 4\sigma T_N^4
+\end{equation}
+
+Hence:
+\begin{equation}
+T_N = \left[\frac{1.4 \times 10^3 \times (1.5 \times 10^8)^2}{4 \times 5.7 \times 10^{-8} \times (4.5 \times 10^9)^2}\right]^{1/4} = \boxed{52 \text{ K}}
+\end{equation}
